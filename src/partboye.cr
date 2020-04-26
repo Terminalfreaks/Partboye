@@ -31,7 +31,11 @@ module Partboye
   pb = Phreak.create_parser do |partboye|
     partboye.bind(word: "list") do
       partition_table = table["partitiontable"].as_h
-      puts partition_table.join("\n")
+      partition_list = [] of String
+      partition_table.each do |k, v|
+        partition_list.push("Partition #{k} - #{v}")
+      end
+      puts partition_list.join("\n")
     end
 
     partboye.bind(word: "exit") do
