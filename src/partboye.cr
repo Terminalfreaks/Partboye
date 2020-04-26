@@ -36,6 +36,7 @@ module Partboye
 
     partboye.bind(word: "exit") do
       puts "Goodbye..."
+      puts " "
       exit
     end
   end
