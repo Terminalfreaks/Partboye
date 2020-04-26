@@ -1,6 +1,7 @@
 require "phreak"
 require "yaml"
 shard = YAML.parse(File.read("./shard.yml"))
+table = YAML.parse(File.read("./src/table.yml"))
 
 running = false
 
@@ -24,8 +25,13 @@ module Partboye
   end
 
   pb = Phreak.create_parser do |partboye|
-    partboye.bind(word: "list") do |sub|
-      puts "Couldn't find partitions."
+    partboye.bind(word: "list") do
+      puts table["partitiontable"]
+    end
+
+    partboye.bind(word: "exit") do
+      puts "Goodbye..."
+      exit
     end
   end
 end
