@@ -43,6 +43,10 @@ module Partboye
       puts " "
       exit
     end
+
+    partboye.unrecognized_args do |a|
+      puts "#{a} is a unknown command. Check the help command."
+    end
   end
 end
 
