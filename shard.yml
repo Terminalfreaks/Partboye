@@ -1,0 +1,13 @@
+name: partboye
+version: 0.0.1
+
+authors:
+  - TorchedSammy
+
+targets:
+  partboye:
+    main: src/partboye.cr
+
+crystal: 0.34.0
+
+license: MIT
