@@ -30,7 +30,7 @@ module Partboye
 
   pb = Phreak.create_parser do |partboye|
     partboye.bind(word: "list") do
-      partition_table = table["partitiontable"].as_a
+      partition_table = table["partitiontable"].as_h
       puts partition_table.join("\n")
     end
 
