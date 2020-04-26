@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  phreak:
+    github: shinzlet/phreak
+    commit: fe432f834290081c8709607118a79944030c3192
+
