@@ -20,6 +20,10 @@ module Partboye
     end
 
     partboye.default do
+      puts "You here to see the Partboye? Welcome. (Partboye v#{shard["version"]})"
+      puts "This isn't a real functional partition manager. You aren't really modifying anything."
+      puts "But it's slightly fun right? The help command might have what you need.\n"
+
       running = true
     end
   end
